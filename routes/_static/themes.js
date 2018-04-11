@@ -26,6 +26,14 @@ const themes = [
   {
     name: 'gecko',
     label: 'Gecko'
+  },
+  {
+    name: 'ozark',
+    label: 'Ozark'
+  },
+  {
+    name: 'scifi',
+    label: 'Scifi'
   }
 ]
 
