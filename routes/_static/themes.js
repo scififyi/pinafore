@@ -32,8 +32,8 @@ const themes = [
     label: 'Ozark'
   },
   {
-    name: 'scifi',
-    label: 'Scifi'
+    name: 'cobalt',
+    label: 'Cobalt'
   }
 ]
 
