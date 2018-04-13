@@ -45,6 +45,8 @@ Automatically fix most linting issues:
 
 ## Testing
 
+Testing requires running Mastodon itself, meaning the [Mastodon development guide](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Development-guide.md) is relevant here. In particular, you'll need a recent version of Ruby, Redis, and Postgres running.
+
 Run integration tests, using headless Chrome by default:
 
     npm test
@@ -78,3 +80,13 @@ If you want to export the current data in the Mastodon instance as canned data,
 so that it can be loaded later, run:
 
     npm run backup-mastodon-data
+
+## Writing tests
+
+Tests use [TestCafé](https://devexpress.github.io/testcafe/). The tests have a naming convention:
+
+* `0xx-test-name.js`: tests that don't modify the Mastodon database (post, delete, follow, etc.)
+* `1xx-test-name.js`: tests that do modify the Mastodon database
+
+In principle the `0-` tests don't have to worry about
+clobbering each other, whereas the `1-` ones do.
